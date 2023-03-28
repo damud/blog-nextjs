@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 const Hero = () => {
   return (
     <section className="py-16">
@@ -6,6 +8,19 @@ const Hero = () => {
       </div>
     </section>
 
+  )
+}
+
+
+
+const Slide = () => {
+  return (
+    <div className="grid md:grid-cols-2">
+      <div className="image">
+        <Image src="" width={600} height={600} />
+      </div>
+      <div className="info"></div>
+    </div>
   )
 }
 
