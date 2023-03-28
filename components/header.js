@@ -1,3 +1,4 @@
+import { ImFacebook, ImTwitter, ImYoutube } from "react-icons/im";
 const header = () => {
   return (
     <header className='bg-gray-50'>
@@ -10,9 +11,9 @@ const header = () => {
       </div>
       <div className="w-96 order-3 flex justify-center">
         <div className="flex gap-6">
-          <a>Facebook</a>
-          <a>Twitter</a>
-          <a>YouTube</a>
+          <a><ImFacebook color="#888" hoverColor="red"/></a>
+          <a><ImTwitter color="#888"/></a>
+          <a><ImYoutube color="#888" /></a>
         </div>
       </div>
       </div>
