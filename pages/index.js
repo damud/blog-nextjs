@@ -1,11 +1,14 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Layout from '@/layout/layout';
+import Layout from '@/layout/Layout';
+
+// Sections
+import Hero from '@/components/Hero';
 
 export default function Home() {
   return (
     <Layout>
-      <h1>Main content</h1>
+     <Hero></Hero>
     </Layout>
     )
 }
