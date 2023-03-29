@@ -4,11 +4,13 @@ import Layout from '@/layout/Layout';
 
 // Sections
 import Hero from '@/components/Hero';
+import Blog from '@/components/Blog';
 
 export default function Home() {
   return (
     <Layout>
      <Hero></Hero>
+     <Blog></Blog>
     </Layout>
     )
 }

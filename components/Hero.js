@@ -37,10 +37,10 @@ const Slide = () => {
   return (
     <div className="grid md:grid-cols-2">
     <div className="image">
-        <Link legacyBehavior href="/"><Image src="/images/img1.jpg" width={600} height={600} alt="" /></Link>
+        <Link href="/"><Image src="/images/img1.jpg" width={600} height={600} alt="" /></Link>
     </div>
     <div className="info flex justify-center flex-col">
-        <div className="cat">
+        <div className="category">
             <Link href="/" className="text-orange-600 hover:text-orange-800">Business, Travel</Link>
             <Link href="/" className="text-gray-800 hover:text-gray-600">- 28/03/2023</Link>
         </div>
