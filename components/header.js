@@ -9,15 +9,13 @@ const header = () => {
         <input type="text" className="input-text" placeholder="Search..." />
       </div>
       <div className="shrink w-80 sm:order-2">
-        <Link legacyBehavior href="/">
-        <a className="font-bold uppercase text-3xl">Design</a>
-        </Link>
+        <Link className="font-bold uppercase text-3xl" href="/">Design</Link>
       </div>
       <div className="w-96 order-3 flex justify-center">
         <div className="flex gap-6">
-          <Link legacyBehavior href="/"><ImFacebook color="#888"/></Link>
-          <Link legacyBehavior href="/"><ImTwitter color="#888"/></Link>
-          <Link legacyBehavior href="/"><ImYoutube color="#888" /></Link>
+          <Link href="/"><ImFacebook color="#888"/></Link>
+          <Link href="/"><ImTwitter color="#888"/></Link>
+          <Link href="/"><ImYoutube color="#888" /></Link>
         </div>
       </div>
       </div>
