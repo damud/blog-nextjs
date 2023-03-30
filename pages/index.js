@@ -6,7 +6,7 @@ import Layout from '@/layout/Layout';
 import Hero from '@/components/Hero';
 import Blog from '@/components/Blog';
 import Posts from '@/components/Posts';
-import CategoryPost from '@/components/Category-Post';
+import CategoryPost from '@/components/CategoryPosts';
 
 export default function Home() {
   return (
