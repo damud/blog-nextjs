@@ -6,6 +6,7 @@ import Layout from '@/layout/Layout';
 import Hero from '@/components/Hero';
 import Blog from '@/components/Blog';
 import Posts from '@/components/Posts';
+import CategoryPost from '@/components/Category-Post';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
      <Hero></Hero>
      <Blog></Blog>
      <Posts></Posts>
+     <CategoryPost></CategoryPost>
     </Layout>
     )
 }
