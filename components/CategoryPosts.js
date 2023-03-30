@@ -14,7 +14,7 @@ const CategoryPost = () => {
                 {Post()}
                 {Post()}
                 </div>
-            </div>
+            </div> 
             <div className="item">
             <h1 className="font-bold text-4xl py-12">Travel</h1>
            <div className="flex flex-col gap-6">
@@ -23,8 +23,7 @@ const CategoryPost = () => {
            {Post()}
            {Post()}
            </div>
-            </div>
-            
+            </div>           
         </div>
     </section>
   )
