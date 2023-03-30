@@ -11,12 +11,7 @@ const Posts = () => {
     <Swiper
        slidesPerView={2}
     >
-        <SwiperSlide>{Post()}</SwiperSlide>
-        <SwiperSlide>{Post()}</SwiperSlide>
-        <SwiperSlide>{Post()}</SwiperSlide>
-        <SwiperSlide>{Post()}</SwiperSlide>
-        <SwiperSlide>{Post()}</SwiperSlide>
-        <SwiperSlide>{Post()}</SwiperSlide>
+        <SwiperSlide></SwiperSlide>
     </Swiper>
     </section>
   )
@@ -26,7 +21,7 @@ const Post = () => {
     return (
       <div className="item">
         <div className="images">
-        <Link href="/"><Image src="/images/img1.jpg" width={600} height={400} alt="" /></Link>
+        <Link href="/"><Image src="/images/img1.jpg" width={400} height={400} alt="" /></Link>
         </div>
         <div className="info flex justify-center flex-col py-4">
           <div className="category">
@@ -34,7 +29,7 @@ const Post = () => {
               <Link href="/" className="text-gray-800 hover:text-gray-600">- 28/03/2023</Link>
           </div>
           <div className="title">
-              <Link href="/" className="text-3xl md:text-4xl font-bold text-gray-800 hover:text-gray-600">Your most unhappy customers are your greatest source of learning</Link>
+              <Link href="/" className="text-3xl md:tezt-4xl font-bold text-gray-800 hover:text-gray-600">Your most unhappy customers are your greatest source of learning</Link>
           </div>
           <p className="text-gray-500 py-3">
               Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind 
