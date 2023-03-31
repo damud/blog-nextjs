@@ -1,4 +1,4 @@
-const newsletter = () => {
+const Newsletter = () => {
   return (
     <section className="bg-gray-50">
         <div className="container mx-auto md:px-20 py-16 text-center">
@@ -12,4 +12,4 @@ const newsletter = () => {
   )
 }
 
-export default newsletter
+export default Newsletter

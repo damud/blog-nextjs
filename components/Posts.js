@@ -11,7 +11,7 @@ const Posts = () => {
     <Swiper
        slidesPerView={2}
     >
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>{Post()}</SwiperSlide>
     </Swiper>
     </section>
   )

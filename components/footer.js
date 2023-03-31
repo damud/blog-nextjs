@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ImFacebook, ImTwitter, ImYoutube } from "react-icons/im";
-import Newsletter from "./_child/newsletter";
+import Newsletter from "./_child/Newsletter";
 
 const Footer = () => {
   const bg = {

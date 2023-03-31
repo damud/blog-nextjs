@@ -1,6 +1,7 @@
 import Layout from "@/layout/layout";
 import Author from "@/components/_child/Author";
 import Image from "next/image";
+import RelatedPosts from "@/components/_child/RelatedPosts";
 
 const Post = () => {
   return (
@@ -33,6 +34,7 @@ const Post = () => {
     </p>
 </div>
             </div>
+            <RelatedPosts></RelatedPosts>
         </section>
 
     </Layout>
