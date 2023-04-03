@@ -1,8 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import Author from "./_child/Author";
+import getPost from "@/library/helper";
 
 const blog = () => {
+  getPost(3).then(response => console.log(response));
   return (
     <section className="container mx-auto md:px-20 py-10">
       <h1 className="font-bold text-4xl py-12 text-center">Latest Posts</h1>
