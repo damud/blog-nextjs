@@ -2,12 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 import Author from "./_child/Author";
 import fetcher from "@/library/fetcher";
+import Loader from "./_child/Loader";
+import Error from "./_child/Error";
 
 const blog = () => {
     const {data, isLoading, isError} = fetcher("api/posts");
    
-    if(isLoading) return <div>Loading...</div>
-    if(isError) return <div>Error</div>
+    if(isLoading) return <Loader />
+    if(true) return <Error />
   return (
     <section className="container mx-auto md:px-20 py-10">
       <h1 className="font-bold text-4xl py-12 text-center">Latest Posts</h1>
