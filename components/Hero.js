@@ -29,7 +29,12 @@ const Hero = () => {
       <div className="container mx-auto md:px-20">
         <h1 className="font-bold text-4xl pb-12 text-center">Trending</h1>
       <Swiper
-      slidesPerView={1}
+       breakpoints={{
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        }
+       }}
       >
       {data.map((value, index) => (
         <SwiperSlide key={index}><Slide data={value}></Slide></SwiperSlide>
@@ -46,20 +51,20 @@ const Slide = ({data}) => {
   return (
     <div className="grid md:grid-cols-2">
     <div className="image">
-        <Link href="/"><Image src={img || "/"} width={600} height={600} alt="" /></Link>
+        <Link href={`/posts/${id}`}><Image src={img || "/"} width={600} height={600} alt="" /></Link>
     </div>
     <div className="info flex justify-center flex-col">
         <div className="category">
-            <Link href="/" className="text-orange-600 hover:text-orange-800">{category || "Unknown"}</Link>
-            <Link href="/" className="text-gray-800 hover:text-gray-600">- {published || "Unknown"}</Link>
+            <Link href={`/posts/${id}`} className="text-orange-600 hover:text-orange-800">{category || "Unknown"}</Link>
+            <Link href={`/posts/${id}`} className="text-gray-800 hover:text-gray-600">- {published || "Unknown"}</Link>
         </div>
         <div className="title">
-            <Link href="/" className="text-3xl md:text-6xl font-bold text-gray-800 hover:text-gray-600">{title || "Unknown"}</Link>
+            <Link href={`/posts/${id}`} className="text-3xl md:text-6xl font-bold text-gray-800 hover:text-gray-600">{title || "Unknown"}</Link>
         </div>
         <p className="text-gray-500 py-3">
             {description || "Description"}
         </p>
-        {author?<Author></Author>:<></>}
+        {author?<Author {...author}></Author>:<></>}
     </div>
 </div>
   )

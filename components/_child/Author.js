@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const author = () => {
+const author = ({name, img, designation}) => {
+  if(!name && !img) return <></>;
   return (
     <div className="author flex py-5">
-        <Image src="/images/author/author1.jpg" width="60" height="60" alt="" />
+        <Image src={img || ""} width="60" height="60" alt="" />
         <div className="flex flex-col justify-center px-4">
-            <Link href="/" className="text-md font-bold text-gray-800 hover:text-gray-600">Flying High</Link>
-            <span className="text-sm text-gray-500">CEO and Founder</span>
+            <Link href="/" className="text-md font-bold text-gray-800 hover:text-gray-600">{name || "No name"}</Link>
+            <span className="text-sm text-gray-500">{designation || "No designation"}</span>
         </div>
       
     </div>

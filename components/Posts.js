@@ -6,8 +6,9 @@ import Author from "./_child/Author";
 import fetcher from "@/library/fetcher";
 import Loader from "./_child/Loader";
 import Error from "./_child/Error";
+import { SWRConfig } from "swr";
 
-const Posts = () => {
+const Posts = ({fallback}) => {
   
   const { data, isLoading, isError } = fetcher('api/popular');
   
@@ -18,11 +19,20 @@ const Posts = () => {
     <section className="container mx-auto md:px-20 py-16">
         <h1 className="font-bold text-4xl py-12 text-center">Most Popular</h1>
     <Swiper
-       slidesPerView={2}
+       breakpoints={{
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        }
+       }}
     >
         {
           data.map((value, index)=> (
-            <SwiperSlide key={index}><Post data={value}></Post></SwiperSlide>
+            <SwiperSlide key={index}>
+              <SWRConfig value={{fallback}}>
+              <Post data={value} />
+              </SWRConfig>
+              </SwiperSlide>
           ))
         }
     </Swiper>
@@ -35,20 +45,20 @@ const Post = ({data}) => {
     return (
       <div className="item">
         <div className="images">
-        <Link href="/"><Image src={img} width={400} height={400} alt="" /></Link>
+        <Link href={`/posts/${id}`}><Image src={img} width={400} height={400} alt="" /></Link>
         </div>
         <div className="info flex justify-center flex-col py-4">
           <div className="category">
-              <Link href="/" className="text-orange-600 hover:text-orange-800">{category || "No Category"}</Link>
-              <Link href="/" className="text-gray-800 hover:text-gray-600">- {published || "28/03/2023"}</Link>
+              <Link href={`/posts/${id}`} className="text-orange-600 hover:text-orange-800">{category || "No Category"}</Link>
+              <Link href={`/posts/${id}`} className="text-gray-800 hover:text-gray-600">- {published || "28/03/2023"}</Link>
           </div>
           <div className="title">
-              <Link href="/" className="text-3xl md:tezt-4xl font-bold text-gray-800 hover:text-gray-600">{title || "No Title"}</Link>
+              <Link href={`/posts/${id}`} className="text-3xl md:tezt-4xl font-bold text-gray-800 hover:text-gray-600">{title || "No Title"}</Link>
           </div>
           <p className="text-gray-500 py-3">
           {description || "No Description"}
           </p>
-          {author?<Author></Author>:<></>}
+          {author?<Author {...author}></Author>:<></>}
         </div>
       </div>
     )
